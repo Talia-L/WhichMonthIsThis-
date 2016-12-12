@@ -1,0 +1,34 @@
+package pkgswitch;
+/**
+ *
+ * @author TaliaL
+ */
+import java.util.Scanner; 
+
+public class switchcode 
+{
+      public static void main(String[] args)
+      {       
+        Scanner keyboard = new Scanner(System.in); 
+        
+        System.out.println("Want to know which months have 28, 30, or 31 days? Enter one of those numbers here: "); 
+        int DaysInAMonth = keyboard.nextInt();
+              
+        String MonthName; 
+       
+        switch(DaysInAMonth)
+        { 
+            case 28: MonthName = "February"; 
+            break; 
+            
+            case 30: MonthName = "April, June, September, November"; 
+            break; 
+                      
+            case 31: MonthName = "January, March, May, July, August, October, December";
+            break; 
+            
+            default: MonthName = "Unknown"; 
+        }
+            System.out.println(MonthName);
+     }   
+  }   
